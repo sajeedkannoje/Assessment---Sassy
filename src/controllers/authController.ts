@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import e, { Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
-import { User } from '../entity/user.entity';
+import { User } from '../entity/User';
 
 import { AppDataSource } from '../data-source';
 

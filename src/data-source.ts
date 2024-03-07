@@ -1,6 +1,6 @@
 import "reflect-metadata"
 import { DataSource } from "typeorm"
-import { User } from "./entity/user.entity"
+import { User } from "./entity/User"
 import { Task } from "./entity/Task"
 
 export const AppDataSource = new DataSource({

@@ -1,6 +1,6 @@
 // entities/Task.js
 import { Entity , PrimaryGeneratedColumn, Column, ManyToOne, CreateDateColumn, UpdateDateColumn, DeleteDateColumn } from "typeorm";
-import {User} from "./user.entity";
+import {User} from "./User";
 
 @Entity({name : "tasks"})
 export class Task {
