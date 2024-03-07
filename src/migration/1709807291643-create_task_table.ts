@@ -10,13 +10,12 @@ export class CreateTaskTable1709807291643 implements MigrationInterface {
             description TEXT,
             due_date TIMESTAMP,
             status VARCHAR(50) NOT NULL,
+            user_id BIGINT UNSIGNED NOT NULL,
             created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
             updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-            deleted_at TIMESTAMP,
-            user_id BIGINT UNSIGNED NOT NULL,
+            deleted_at TIMESTAMP NULL,
             FOREIGN KEY (user_id) REFERENCES users(id)
-        );
-        
+        );        
     `);
     }
 

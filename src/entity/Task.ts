@@ -29,6 +29,6 @@ export class Task {
   deleted_at: Date;
 
 
-  // @ManyToOne(() => User, user => user.tasks)
-  // user;
+  @ManyToOne(() => User, user => user.tasks)
+  user;
 }
