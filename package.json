@@ -1,0 +1,19 @@
+{
+  "name": "assessment---sassy",
+  "version": "1.0.0",
+  "description": "Build a RESTful API for a simple task management system.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sajeedkannoje/Assessment---Sassy.git"
+  },
+  "author": "sajeed kannoje",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sajeedkannoje/Assessment---Sassy/issues"
+  },
+  "homepage": "https://github.com/sajeedkannoje/Assessment---Sassy#readme"
+}
