@@ -11,7 +11,7 @@ export class CreateUserTable1709807285310 implements MigrationInterface {
                 password VARCHAR(255) NOT NULL,
                 created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
                 updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-                deleted_at TIMESTAMP
+                deleted_at TIMESTAMP NULL
             )
         `);
     }

@@ -1,6 +1,6 @@
 // entities/Task.js
 import { Entity , PrimaryGeneratedColumn, Column, ManyToOne, CreateDateColumn, UpdateDateColumn, DeleteDateColumn } from "typeorm";
-import {User} from "./User";
+import {User} from "./user.entity";
 
 @Entity({name : "tasks"})
 export class Task {
@@ -29,6 +29,6 @@ export class Task {
   deleted_at: Date;
 
 
-  @ManyToOne(() => User, user => user.tasks)
-  user;
+  // @ManyToOne(() => User, user => user.tasks)
+  // user;
 }

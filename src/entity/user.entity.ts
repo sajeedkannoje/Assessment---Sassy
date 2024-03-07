@@ -1,8 +1,7 @@
 import { Column, CreateDateColumn, DeleteDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
-
 import { Task } from "./Task";
-@Entity({ name: 'user' })
 
+@Entity({ name: 'users' })
 export class User {
     @PrimaryGeneratedColumn()
     id: number;
@@ -22,9 +21,8 @@ export class User {
     @UpdateDateColumn({ type: "timestamp", default: () => "CURRENT_TIMESTAMP(6)" })
     updated_at: Date;
 
-    @DeleteDateColumn({ type: "timestamp", default: () => "CURRENT_TIMESTAMP(6)" })
-    deleted_at: Date;
 
-    @OneToMany(() => Task, task => task.user)
-    tasks;
+    // @OneToMany(() => Task, task => task.user)
+    // tasks: Task[]; // Define the type of the property
+
 }
