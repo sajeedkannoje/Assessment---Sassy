@@ -1,15 +1,14 @@
+import express from 'express';
+import { AuthMiddleware } from '../middleware/authMiddleware';
+import { TaskController } from '../controllers/taskController';
+const router = express.Router();
 
-// const express = require('express');
-// const router = express.Router();
-// const taskController = require('../controllers/taskController');
-// const { requireAuth } = require('../middlewares/authMiddleware');
+router.use(AuthMiddleware.verifyToken);
 
-// router.use(requireAuth);
-// router.get('/', taskController.getAllTasks);
-// router.post('/', taskController.createTask);
-// router.get('/:id', taskController.getTask);
-// router.put('/:id', taskController.updateTask);
-// router.delete('/:id', taskController.deleteTask);
+router.get('/', TaskController.getAllTasks);
+router.post('/', TaskController.createTask);
+router.get('/:id', TaskController.getTaskById);
+router.put('/:id', TaskController.updateTask);
+router.delete('/:id', TaskController.deleteTask);
 
-// module.exports = router;
-import Router
+module.exports = router;
