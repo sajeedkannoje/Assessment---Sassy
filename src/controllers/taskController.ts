@@ -11,6 +11,7 @@ export namespace TaskController {
         try {
             const tasks = await taskRepository.find({ relations: ['user'] });
             res.json(tasks);
+            
         } catch (error) {
             console.error(error);
             res.status(500).json({ message: 'Internal server error' });
