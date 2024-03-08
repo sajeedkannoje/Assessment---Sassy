@@ -8,8 +8,8 @@ export namespace TaskRoutes {
     export const router = Router();
 router.use(AuthMiddleware.verifyToken);
 router.get('/', TaskController.getAllTasks);
-// router.post('/', TaskController.createTask);
-// router.get('/:id', TaskController.getTaskById);
+router.post('/', TaskController.createTask);
+router.get('/:id', TaskController.getTaskById);
 // router.put('/:id', TaskController.updateTask);
 // router.delete('/:id', TaskController.deleteTask);
 }

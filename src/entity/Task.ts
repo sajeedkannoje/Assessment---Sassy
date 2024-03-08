@@ -5,7 +5,7 @@ import {User} from "./User";
 @Entity({name : "tasks"})
 export class Task {
   @PrimaryGeneratedColumn()
-  id : string;
+  id : number;
 
   @Column()
   title : string;
@@ -16,7 +16,7 @@ export class Task {
   @Column()
   due_date : string;
 
-  @Column()
+  @Column({default : "pending" })
   status : string;
 
   @CreateDateColumn({ type: "timestamp", default: () => "CURRENT_TIMESTAMP(6)" })
@@ -25,7 +25,7 @@ export class Task {
   @UpdateDateColumn({ type: "timestamp", default: () => "CURRENT_TIMESTAMP(6)" })
   updated_at: Date;
 
-  @DeleteDateColumn({ type: "timestamp", default: () => "CURRENT_TIMESTAMP(6)" })
+  @DeleteDateColumn({ type: "timestamp", default: () => "NULL" })
   deleted_at: Date;
 
 

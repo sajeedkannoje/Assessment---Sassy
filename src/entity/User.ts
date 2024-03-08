@@ -21,6 +21,9 @@ export class User {
     @UpdateDateColumn({ type: "timestamp", default: () => "CURRENT_TIMESTAMP(6)" })
     updated_at: Date;
 
+    @DeleteDateColumn({ type: "timestamp", default: () => "NULL" })
+    deleted_at: Date;
+  
 
     @OneToMany(() => Task, task => task.user)
     tasks: Task[]; // Define the type of the property
