@@ -1,8 +1,5 @@
 import { MigrationInterface, QueryRunner } from "typeorm";
 
-/**
- * CreateTaskTable1709807291643
- */
 export class CreateTaskTable1709807291643 implements MigrationInterface {
     
     /**

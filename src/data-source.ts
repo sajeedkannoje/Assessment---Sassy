@@ -31,6 +31,6 @@ export const AppDataSource : DataSource = new DataSource( {
 	logging : false,
 	migrationsTableName : "migrations",
 	entities : [ User, Task ],
-	migrations : [ "src/migration/**/*.ts" ],
+	migrations : [ "src/migration/**/*.js" ],
 	subscribers : [],
 } )
