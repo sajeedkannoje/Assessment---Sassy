@@ -1,7 +1,15 @@
 import { MigrationInterface, QueryRunner } from "typeorm";
 
+/**
+ * CreateTaskTable1709807291643
+ */
 export class CreateUserTable1709807285310 implements MigrationInterface {
-
+    
+    /**
+     * Create the table
+     * @param {QueryRunner} queryRunner
+     * @returns {Promise<void>}
+     */
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(`
             CREATE TABLE IF NOT EXISTS users (
@@ -15,7 +23,12 @@ export class CreateUserTable1709807285310 implements MigrationInterface {
             )
         `);
     }
-
+    
+    /**
+     *  Drop the table
+     * @param {QueryRunner} queryRunner
+     * @returns {Promise<void>}
+     */
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(`DROP TABLE IF EXISTS users`);
     }

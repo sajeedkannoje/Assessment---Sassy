@@ -4,9 +4,15 @@ import { Task }                 from '../entity/Task';
 import { AppDataSource }        from '../data-source';
 import { AuthenticatedRequest } from '../interfaces/authenticated-request';
 
-
+/**
+ * Task repository
+ * @type {Repository<Task>}
+ */
 const taskRepository : Repository<Task> = AppDataSource.getRepository( Task );
 
+/**
+ * TaskController
+ */
 export namespace TaskController {
 	
 	/**
