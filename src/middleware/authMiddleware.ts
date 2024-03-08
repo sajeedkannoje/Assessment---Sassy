@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import { Response, NextFunction } from 'express';
 import { AuthenticatedRequest } from '../interfaces/authenticated-request';
 
-const JWT_SECRET = 'jwt_secret'; // Replace with your actual JWT secret
+const JWT_SECRET : string = process.env.JWT_SECRET
 
 export namespace AuthMiddleware {
     export function verifyToken(req: AuthenticatedRequest, res: Response, next: NextFunction) {
